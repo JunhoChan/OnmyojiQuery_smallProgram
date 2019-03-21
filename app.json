@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#96aab9",
+    "navigationBarTitleText": "阴阳师式神查询",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,44 @@
+/* 共用样式 */
+
+.flex {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.flex-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1;
+}
+
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pt15 {
+  padding-top: 15rpx;
+}
+
+.flex-jc {
+  display: flex;
+  justify-content: center;
+}

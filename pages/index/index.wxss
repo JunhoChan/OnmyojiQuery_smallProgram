@@ -1,0 +1,141 @@
+/**index.wxss**/
+.container {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background: url(http://i2.hdslb.com/bfs/archive/9d35e8807b334374ecd8ee6a6c675e16e093349c.jpg) no-repeat center 70%;
+  /* background-color: rgba(0, 0, 0, .1); */
+}
+
+
+
+/* 滚动区域 */
+.scroll-wrapper {
+  width: 100vw;
+  height: 55vh;
+}
+
+/* 滚动内容 */
+.scroll-content {
+  border-bottom: 3px solid #dbe4ec;
+}
+/* 左边的标题 */
+.scroll-content .title {
+  background-color: #dbe4ec;
+  width: 12vw;
+  font-size: 30rpx;
+  text-align: center;
+}
+/* 标题下的式神 */
+.scroll-content .title-details {
+  display: grid;
+  grid-template-columns: 22vw 22vw 22vw 22vw;
+  width: 88vw; 
+  background-color: #f7f7f7;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  opacity: 0.9;
+}
+
+.scroll-content .title-details view {
+  padding: 1.5vw;
+  height: 42rpx;
+  line-height: 42rpx;
+  text-indent: 5rpx;
+  border: 1rpx solid #dbe4ec;
+  border-radius: 1rpx; 
+}
+
+
+
+/* 提示内容 */
+.tip-content {
+  width: 100vw;
+  background-color: #dbe4ec;
+  font-size: 32rpx;
+  padding: 25rpx;
+}
+
+/* 没有数据选中 */
+.Nothing-selected {
+  font-size: 35rpx;
+  font-weight: 700;
+}
+
+/* 显示选择数据 */
+.show-selected-data {
+  width: 100vw;
+  height: 6vh;
+  font-size: 25rpx;
+  line-height: 6vh;
+  font-weight: 500;
+  margin-bottom: 4vh;
+  margin-top: 1vh;
+}
+
+
+/* 选中数据标签 */
+.show-selected-data .data-tag {
+  position: relative;
+  background-color: rgba(255, 255, 255, .9);
+  width: 135rpx;
+  height: 64rpx;
+  color: orange;
+  border-radius: 18rpx 10rpx 18rpx 3rpx;
+  margin-left: 5rpx;
+  border:2rpx solid orange;
+}
+/* 伪类作为icon的背景 */
+.show-selected-data .data-tag::before {
+  content: "";
+  display: block;
+  height: 25rpx;
+  width: 25rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  background-color: orange;
+  border-top-right-radius: 10rpx;
+  border-bottom-left-radius: 8rpx;
+}
+
+.show-selected-data .data-tag::after {
+  content: "X";
+  display: block;
+  height: 25rpx;
+  position: absolute;
+  color: #fff;
+  top: -25rpx;
+  right: 5rpx;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+/* 提交按钮 */
+.container button {
+  width: 90vw;
+  color: #fff;
+}
+
+
+/** 美化scroll滚动条 **/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color:transparent;
+} 
+
+/* 激活状态 */
+.actived {
+  background-color: #93a8be;
+}
+
+/* 没选择单位 */
+.notSelected {
+  background-color:gray;
+}
+/* 有选中单位 */
+.hasSelected {
+   background-color: #c51140;
+   font-weight: 700;
+}

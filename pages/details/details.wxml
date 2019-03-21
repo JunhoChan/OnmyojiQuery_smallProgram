@@ -1,0 +1,26 @@
+<view class="details-container">
+    <view class='bg'></view>
+    <view class='dataList flex-column-center'>
+    
+      <!--  有数据列表区域 -->
+      <block   wx:if="{{DetailsDatas.length > 0}}">
+            <view class='data-item' wx:for="{{DetailsDatas}}" 
+              wx:for-item="item" wx:key="unique" >
+              <view class='item-title flex-ac'>{{item.chapter}} {{item.name}}</view>
+              <view class='item-content flex' >
+                  <block wx:for="{{queryDataArr}}" wx:for-item="oitem" wx:key="unique">
+                      <block wx:if="{{ item[oitem] }}"> 
+                          <view> {{oitem}}:{{ item[oitem] }} </view>
+                      </block>
+                  </block>
+              </view>
+            </view>
+      </block>
+      <!--  没有数据 -->
+      <block wx:else>
+            <view class='NoThing flex-center'>
+              暂无相关数据!
+            </view>
+      </block>
+    </view>
+</view>

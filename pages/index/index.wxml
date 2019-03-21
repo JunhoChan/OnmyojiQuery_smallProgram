@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 滚动区域 -->
+  <scroll-view scroll-y="true" class='scroll-wrapper' bindtap="selectedVal" >
+
+     <view class='scroll-content flex-stretch' wx:for="{{IndexDatas}}" 
+        wx:for-item="item" wx:key="unique">
+        <view class='title pt15'>{{item.type}}</view>
+        <view class='title-details'>
+          <block wx:for="{{item.datas}}" 
+                wx:for-item="iItem" wx:key="unique1" >    
+            <view class="pt15 {{storeSelectedArr[0].id === iItem.id || storeSelectedArr[1].id === iItem.id || storeSelectedArr[2].id === iItem.id || storeSelectedArr[3].id === iItem.id || storeSelectedArr[4].id === iItem.id ?'actived':''}}" data-id='{{iItem.id}}' 
+            data-name='{{iItem.name}}'>
+                {{iItem.name}}
+            </view>
+          </block>
+        </view>
+     </view>
+
+  </scroll-view>
+
+  <!-- 提示信息区域 -->
+  <view class='tip-content flex-center'>
+    <text>已选择式神</text>
+  </view>
+
+  <!-- 选中消息内容显示区域 -->
+  <view class='show-selected-data  flex-center'  bindtap='cancelItem'>
+      <block  wx:for="{{storeSelectedArr}}" wx:key="unique2">
+        <text class='data-tag flex-center' data-id="{{item.id}}">{{item.name}}</text>
+      </block>
+
+      <block wx:if="{{storeSelectedArr.length === 0}}">
+        <view class="Nothing-selected">无</view>
+      </block>
+  </view>
+
+  <!-- 按钮 -->
+  <button bindtap='submitData' class="{{ storeSelectedArr.length === 0 ? 'notSelected' : 'hasSelected' }}">搜 索</button>
+
+</view>
